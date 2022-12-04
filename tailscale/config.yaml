@@ -1,0 +1,23 @@
+arch:
+- aarch64
+description: Zero config VPN for building secure networks
+devices:
+- /dev/net/tun
+hassio_api: true
+host_network: true
+image: ghcr.io/tdalbo92/tailscale/{arch}
+ingress: true
+ingress_port: 0
+ingress_stream: true
+init: false
+name: Tailscale
+panel_icon: mdi:vpn
+privileged:
+- NET_ADMIN
+schema:
+  tags:
+  - match(^tag:[a-zA-Z0-9]-?[a-zA-Z0-9]+$)?
+slug: tailscale
+startup: services
+url: https://github.com/tdalbo92/addon-tailscale
+version: 1.0.0

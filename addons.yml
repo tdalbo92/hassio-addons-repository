@@ -1,0 +1,7 @@
+---
+channel: stable
+addons:
+  tailscale:
+    repository: tdalbo92/addon-tailscale
+    target: tailscale
+    image: ghcr.io/tdalbo92/tailscale/{arch}
